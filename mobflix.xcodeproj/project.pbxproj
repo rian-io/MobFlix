@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96F46273290958830012FC98 /* mobflixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F46272290958830012FC98 /* mobflixApp.swift */; };
+		96F46275290958830012FC98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F46274290958830012FC98 /* ContentView.swift */; };
+		96F46277290958840012FC98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F46276290958840012FC98 /* Assets.xcassets */; };
+		96F4627A290958840012FC98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F46279290958840012FC98 /* Preview Assets.xcassets */; };
+		96F46284290958840012FC98 /* mobflixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F46283290958840012FC98 /* mobflixTests.swift */; };
+		96F4628E290958840012FC98 /* mobflixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4628D290958840012FC98 /* mobflixUITests.swift */; };
+		96F46290290958840012FC98 /* mobflixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4628F290958840012FC98 /* mobflixUITestsLaunchTests.swift */; };
+		96F462A22909804B0012FC98 /* VideoFeatured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462A12909804B0012FC98 /* VideoFeatured.swift */; };
+		96F462A52909868F0012FC98 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462A42909868F0012FC98 /* Category.swift */; };
+		96F462A72909DA720012FC98 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462A62909DA720012FC98 /* Theme.swift */; };
+		96F462A92909E8D70012FC98 /* CategoryBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462A82909E8D70012FC98 /* CategoryBadge.swift */; };
+		96F462AB2909EA800012FC98 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462AA2909EA800012FC98 /* CategoryList.swift */; };
+		96F462AD290A167E0012FC98 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462AC290A167E0012FC98 /* Video.swift */; };
+		96F462AF290A1ADB0012FC98 /* VideoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462AE290A1ADB0012FC98 /* VideoError.swift */; };
+		96F462B1290A1CF00012FC98 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462B0290A1CF00012FC98 /* TestData.swift */; };
+		96F462B3290A21430012FC98 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462B2290A21430012FC98 /* HTTPDataDownloader.swift */; };
+		96F462B5290A22560012FC98 /* TestDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462B4290A22560012FC98 /* TestDownloader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96F46280290958840012FC98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96F46267290958830012FC98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96F4626E290958830012FC98;
+			remoteInfo = mobflix;
+		};
+		96F4628A290958840012FC98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96F46267290958830012FC98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96F4626E290958830012FC98;
+			remoteInfo = mobflix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96F4626F290958830012FC98 /* mobflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mobflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F46272290958830012FC98 /* mobflixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobflixApp.swift; sourceTree = "<group>"; };
+		96F46274290958830012FC98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		96F46276290958840012FC98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96F46279290958840012FC98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		96F4627F290958840012FC98 /* mobflixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mobflixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F46283290958840012FC98 /* mobflixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobflixTests.swift; sourceTree = "<group>"; };
+		96F46289290958840012FC98 /* mobflixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mobflixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F4628D290958840012FC98 /* mobflixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobflixUITests.swift; sourceTree = "<group>"; };
+		96F4628F290958840012FC98 /* mobflixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobflixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96F462A12909804B0012FC98 /* VideoFeatured.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeatured.swift; sourceTree = "<group>"; };
+		96F462A42909868F0012FC98 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		96F462A62909DA720012FC98 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		96F462A82909E8D70012FC98 /* CategoryBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBadge.swift; sourceTree = "<group>"; };
+		96F462AA2909EA800012FC98 /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
+		96F462AC290A167E0012FC98 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		96F462AE290A1ADB0012FC98 /* VideoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoError.swift; sourceTree = "<group>"; };
+		96F462B0290A1CF00012FC98 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		96F462B2290A21430012FC98 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
+		96F462B4290A22560012FC98 /* TestDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDownloader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96F4626C290958830012FC98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F4627C290958840012FC98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F46286290958840012FC98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96F46266290958830012FC98 = {
+			isa = PBXGroup;
+			children = (
+				96F46271290958830012FC98 /* mobflix */,
+				96F46282290958840012FC98 /* mobflixTests */,
+				96F4628C290958840012FC98 /* mobflixUITests */,
+				96F46270290958830012FC98 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96F46270290958830012FC98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96F4626F290958830012FC98 /* mobflix.app */,
+				96F4627F290958840012FC98 /* mobflixTests.xctest */,
+				96F46289290958840012FC98 /* mobflixUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96F46271290958830012FC98 /* mobflix */ = {
+			isa = PBXGroup;
+			children = (
+				96F46272290958830012FC98 /* mobflixApp.swift */,
+				96F46276290958840012FC98 /* Assets.xcassets */,
+				96F462A3290986520012FC98 /* Model */,
+				96F462B6290A23F90012FC98 /* Network */,
+				96F4629C290962860012FC98 /* View */,
+				96F46278290958840012FC98 /* Preview Content */,
+			);
+			path = mobflix;
+			sourceTree = "<group>";
+		};
+		96F46278290958840012FC98 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				96F46279290958840012FC98 /* Preview Assets.xcassets */,
+				96F462B0290A1CF00012FC98 /* TestData.swift */,
+				96F462B4290A22560012FC98 /* TestDownloader.swift */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		96F46282290958840012FC98 /* mobflixTests */ = {
+			isa = PBXGroup;
+			children = (
+				96F46283290958840012FC98 /* mobflixTests.swift */,
+			);
+			path = mobflixTests;
+			sourceTree = "<group>";
+		};
+		96F4628C290958840012FC98 /* mobflixUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96F4628D290958840012FC98 /* mobflixUITests.swift */,
+				96F4628F290958840012FC98 /* mobflixUITestsLaunchTests.swift */,
+			);
+			path = mobflixUITests;
+			sourceTree = "<group>";
+		};
+		96F4629C290962860012FC98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				96F46274290958830012FC98 /* ContentView.swift */,
+				96F462A029097FA30012FC98 /* Category */,
+				96F4629F29097F940012FC98 /* Video */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		96F4629F29097F940012FC98 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				96F462A12909804B0012FC98 /* VideoFeatured.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		96F462A029097FA30012FC98 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				96F462A82909E8D70012FC98 /* CategoryBadge.swift */,
+				96F462AA2909EA800012FC98 /* CategoryList.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		96F462A3290986520012FC98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96F462A42909868F0012FC98 /* Category.swift */,
+				96F462A62909DA720012FC98 /* Theme.swift */,
+				96F462AC290A167E0012FC98 /* Video.swift */,
+				96F462AE290A1ADB0012FC98 /* VideoError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96F462B6290A23F90012FC98 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				96F462B2290A21430012FC98 /* HTTPDataDownloader.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96F4626E290958830012FC98 /* mobflix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F46293290958840012FC98 /* Build configuration list for PBXNativeTarget "mobflix" */;
+			buildPhases = (
+				96F4626B290958830012FC98 /* Sources */,
+				96F4626C290958830012FC98 /* Frameworks */,
+				96F4626D290958830012FC98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mobflix;
+			productName = mobflix;
+			productReference = 96F4626F290958830012FC98 /* mobflix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96F4627E290958840012FC98 /* mobflixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F46296290958840012FC98 /* Build configuration list for PBXNativeTarget "mobflixTests" */;
+			buildPhases = (
+				96F4627B290958840012FC98 /* Sources */,
+				96F4627C290958840012FC98 /* Frameworks */,
+				96F4627D290958840012FC98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96F46281290958840012FC98 /* PBXTargetDependency */,
+			);
+			name = mobflixTests;
+			productName = mobflixTests;
+			productReference = 96F4627F290958840012FC98 /* mobflixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96F46288290958840012FC98 /* mobflixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F46299290958840012FC98 /* Build configuration list for PBXNativeTarget "mobflixUITests" */;
+			buildPhases = (
+				96F46285290958840012FC98 /* Sources */,
+				96F46286290958840012FC98 /* Frameworks */,
+				96F46287290958840012FC98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96F4628B290958840012FC98 /* PBXTargetDependency */,
+			);
+			name = mobflixUITests;
+			productName = mobflixUITests;
+			productReference = 96F46289290958840012FC98 /* mobflixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96F46267290958830012FC98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					96F4626E290958830012FC98 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					96F4627E290958840012FC98 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 96F4626E290958830012FC98;
+					};
+					96F46288290958840012FC98 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 96F4626E290958830012FC98;
+					};
+				};
+			};
+			buildConfigurationList = 96F4626A290958830012FC98 /* Build configuration list for PBXProject "mobflix" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96F46266290958830012FC98;
+			productRefGroup = 96F46270290958830012FC98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96F4626E290958830012FC98 /* mobflix */,
+				96F4627E290958840012FC98 /* mobflixTests */,
+				96F46288290958840012FC98 /* mobflixUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96F4626D290958830012FC98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F4627A290958840012FC98 /* Preview Assets.xcassets in Resources */,
+				96F46277290958840012FC98 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F4627D290958840012FC98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F46287290958840012FC98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96F4626B290958830012FC98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F46275290958830012FC98 /* ContentView.swift in Sources */,
+				96F462B3290A21430012FC98 /* HTTPDataDownloader.swift in Sources */,
+				96F462AB2909EA800012FC98 /* CategoryList.swift in Sources */,
+				96F462A92909E8D70012FC98 /* CategoryBadge.swift in Sources */,
+				96F462B1290A1CF00012FC98 /* TestData.swift in Sources */,
+				96F462A52909868F0012FC98 /* Category.swift in Sources */,
+				96F462B5290A22560012FC98 /* TestDownloader.swift in Sources */,
+				96F462A72909DA720012FC98 /* Theme.swift in Sources */,
+				96F462AD290A167E0012FC98 /* Video.swift in Sources */,
+				96F462A22909804B0012FC98 /* VideoFeatured.swift in Sources */,
+				96F46273290958830012FC98 /* mobflixApp.swift in Sources */,
+				96F462AF290A1ADB0012FC98 /* VideoError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F4627B290958840012FC98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F46284290958840012FC98 /* mobflixTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F46285290958840012FC98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F46290290958840012FC98 /* mobflixUITestsLaunchTests.swift in Sources */,
+				96F4628E290958840012FC98 /* mobflixUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96F46281290958840012FC98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96F4626E290958830012FC98 /* mobflix */;
+			targetProxy = 96F46280290958840012FC98 /* PBXContainerItemProxy */;
+		};
+		96F4628B290958840012FC98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96F4626E290958830012FC98 /* mobflix */;
+			targetProxy = 96F4628A290958840012FC98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		96F46291290958840012FC98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96F46292290958840012FC98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96F46294290958840012FC98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"mobflix/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.rianoliveira.mobflix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96F46295290958840012FC98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"mobflix/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.rianoliveira.mobflix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		96F46297290958840012FC98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.rianoliveira.mobflixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobflix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mobflix";
+			};
+			name = Debug;
+		};
+		96F46298290958840012FC98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.rianoliveira.mobflixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobflix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mobflix";
+			};
+			name = Release;
+		};
+		96F4629A290958840012FC98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.rianoliveira.mobflixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mobflix;
+			};
+			name = Debug;
+		};
+		96F4629B290958840012FC98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.rianoliveira.mobflixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mobflix;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96F4626A290958830012FC98 /* Build configuration list for PBXProject "mobflix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F46291290958840012FC98 /* Debug */,
+				96F46292290958840012FC98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96F46293290958840012FC98 /* Build configuration list for PBXNativeTarget "mobflix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F46294290958840012FC98 /* Debug */,
+				96F46295290958840012FC98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96F46296290958840012FC98 /* Build configuration list for PBXNativeTarget "mobflixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F46297290958840012FC98 /* Debug */,
+				96F46298290958840012FC98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96F46299290958840012FC98 /* Build configuration list for PBXNativeTarget "mobflixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F4629A290958840012FC98 /* Debug */,
+				96F4629B290958840012FC98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96F46267290958830012FC98 /* Project object */;
+}

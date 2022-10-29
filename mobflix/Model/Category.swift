@@ -22,6 +22,7 @@ enum Category: String, CaseIterable, Identifiable {
     var colour: Color {
         Color(rawValue)
     }
+    
     var name: String {
         switch self {
         case.datascience:

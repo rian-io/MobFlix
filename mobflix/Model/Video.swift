@@ -10,15 +10,15 @@ import Foundation
 struct Video: Identifiable {
     var id: String
     var title: String
-    var description: String
-    var url: URL
+    var category: Category
+    var url: String
 }
 
 extension Video: Decodable {
     private enum CodingKeys: String, CodingKey {
         case id
         case title = "titulo"
-        case description = "descricao"
+        case category = "categoria"
         case url
     }
     
@@ -26,12 +26,12 @@ extension Video: Decodable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         let rawId = try? values.decode(String.self, forKey: .id)
         let rawTitle = try? values.decode(String.self, forKey: .title)
-        let rawDescription = try? values.decode(String.self, forKey: .description)
+        let rawCategory = try? values.decode(String.self, forKey: .category)
         let rawUrl = try? values.decode(String.self, forKey: .url)
         
         guard let id = rawId,
               let title = rawTitle,
-              let Description = rawDescription,
+              let category = rawCategory,
               let url = rawUrl
         else {
             throw VideoError.missingData
@@ -39,7 +39,7 @@ extension Video: Decodable {
         
         self.id = id
         self.title = title
-        self.description = Description
-        self.url = URL(string: url)!
+        self.category = Category.init(rawValue: category)!
+        self.url = url
     }
 }

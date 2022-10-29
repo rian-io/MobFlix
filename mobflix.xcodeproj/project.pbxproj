@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96B58841290D58110072A696 /* VideoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B58840290D58110072A696 /* VideoClient.swift */; };
+		96B58843290D706C0072A696 /* VideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B58842290D706C0072A696 /* VideoItem.swift */; };
+		96B58844290D90910072A696 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462B0290A1CF00012FC98 /* TestData.swift */; };
+		96B58849290DAAFA0072A696 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B58848290DAAFA0072A696 /* FloatingButton.swift */; };
 		96F46273290958830012FC98 /* mobflixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F46272290958830012FC98 /* mobflixApp.swift */; };
-		96F46275290958830012FC98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F46274290958830012FC98 /* ContentView.swift */; };
+		96F46275290958830012FC98 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F46274290958830012FC98 /* Home.swift */; };
 		96F46277290958840012FC98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F46276290958840012FC98 /* Assets.xcassets */; };
 		96F4627A290958840012FC98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F46279290958840012FC98 /* Preview Assets.xcassets */; };
 		96F46284290958840012FC98 /* mobflixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F46283290958840012FC98 /* mobflixTests.swift */; };
@@ -44,9 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96B58840290D58110072A696 /* VideoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClient.swift; sourceTree = "<group>"; };
+		96B58842290D706C0072A696 /* VideoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoItem.swift; sourceTree = "<group>"; };
+		96B58848290DAAFA0072A696 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		96F4626F290958830012FC98 /* mobflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mobflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F46272290958830012FC98 /* mobflixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobflixApp.swift; sourceTree = "<group>"; };
-		96F46274290958830012FC98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		96F46274290958830012FC98 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		96F46276290958840012FC98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96F46279290958840012FC98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96F4627F290958840012FC98 /* mobflixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mobflixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96B58847290DAAE20072A696 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				96B58848290DAAFA0072A696 /* FloatingButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		96F46266290958830012FC98 = {
 			isa = PBXGroup;
 			children = (
@@ -154,8 +169,9 @@
 		96F4629C290962860012FC98 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				96F46274290958830012FC98 /* ContentView.swift */,
+				96F46274290958830012FC98 /* Home.swift */,
 				96F462A029097FA30012FC98 /* Category */,
+				96B58847290DAAE20072A696 /* Components */,
 				96F4629F29097F940012FC98 /* Video */,
 			);
 			path = View;
@@ -165,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				96F462A12909804B0012FC98 /* VideoFeatured.swift */,
+				96B58842290D706C0072A696 /* VideoItem.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -193,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				96F462B2290A21430012FC98 /* HTTPDataDownloader.swift */,
+				96B58840290D58110072A696 /* VideoClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -327,18 +345,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96F46275290958830012FC98 /* ContentView.swift in Sources */,
+				96F46275290958830012FC98 /* Home.swift in Sources */,
 				96F462B3290A21430012FC98 /* HTTPDataDownloader.swift in Sources */,
+				96B58849290DAAFA0072A696 /* FloatingButton.swift in Sources */,
 				96F462AB2909EA800012FC98 /* CategoryList.swift in Sources */,
 				96F462A92909E8D70012FC98 /* CategoryBadge.swift in Sources */,
 				96F462B1290A1CF00012FC98 /* TestData.swift in Sources */,
 				96F462A52909868F0012FC98 /* Category.swift in Sources */,
 				96F462B5290A22560012FC98 /* TestDownloader.swift in Sources */,
 				96F462A72909DA720012FC98 /* Theme.swift in Sources */,
+				96B58843290D706C0072A696 /* VideoItem.swift in Sources */,
 				96F462AD290A167E0012FC98 /* Video.swift in Sources */,
 				96F462A22909804B0012FC98 /* VideoFeatured.swift in Sources */,
 				96F46273290958830012FC98 /* mobflixApp.swift in Sources */,
 				96F462AF290A1ADB0012FC98 /* VideoError.swift in Sources */,
+				96B58841290D58110072A696 /* VideoClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96F46284290958840012FC98 /* mobflixTests.swift in Sources */,
+				96B58844290D90910072A696 /* TestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

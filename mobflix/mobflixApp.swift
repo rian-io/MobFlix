@@ -10,8 +10,12 @@ import SwiftUI
 @main
 struct mobflixApp: App {
     var body: some Scene {
+        let decoder = JSONDecoder()
+        let videos: [Video] = try! decoder.decode([Video].self, from: testData)
+        let video = videos.first!
+        
         WindowGroup {
-            ContentView()
+            Home(videoFeatured: video, videos: videos)
         }
     }
 }

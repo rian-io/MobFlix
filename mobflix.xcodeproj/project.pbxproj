@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		968FABFE290DC1F5009B71F4 /* VideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FABFD290DC1F5009B71F4 /* VideoProvider.swift */; };
+		968FAC00290DD138009B71F4 /* Video+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FABFF290DD138009B71F4 /* Video+Preview.swift */; };
 		96B58841290D58110072A696 /* VideoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B58840290D58110072A696 /* VideoClient.swift */; };
 		96B58843290D706C0072A696 /* VideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B58842290D706C0072A696 /* VideoItem.swift */; };
 		96B58844290D90910072A696 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F462B0290A1CF00012FC98 /* TestData.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		968FABFD290DC1F5009B71F4 /* VideoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoProvider.swift; sourceTree = "<group>"; };
+		968FABFF290DD138009B71F4 /* Video+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Video+Preview.swift"; sourceTree = "<group>"; };
 		96B58840290D58110072A696 /* VideoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClient.swift; sourceTree = "<group>"; };
 		96B58842290D706C0072A696 /* VideoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoItem.swift; sourceTree = "<group>"; };
 		96B58848290DAAFA0072A696 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
@@ -98,6 +102,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		968FABFB290DC1CB009B71F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96F46276290958840012FC98 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		968FABFC290DC1DD009B71F4 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				968FABFD290DC1F5009B71F4 /* VideoProvider.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
 		96B58847290DAAE20072A696 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,9 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				96F46272290958830012FC98 /* mobflixApp.swift */,
-				96F46276290958840012FC98 /* Assets.xcassets */,
 				96F462A3290986520012FC98 /* Model */,
+				968FABFC290DC1DD009B71F4 /* ModelView */,
 				96F462B6290A23F90012FC98 /* Network */,
+				968FABFB290DC1CB009B71F4 /* Resources */,
 				96F4629C290962860012FC98 /* View */,
 				96F46278290958840012FC98 /* Preview Content */,
 			);
@@ -145,6 +166,7 @@
 				96F46279290958840012FC98 /* Preview Assets.xcassets */,
 				96F462B0290A1CF00012FC98 /* TestData.swift */,
 				96F462B4290A22560012FC98 /* TestDownloader.swift */,
+				968FABFF290DD138009B71F4 /* Video+Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -199,9 +221,9 @@
 			isa = PBXGroup;
 			children = (
 				96F462A42909868F0012FC98 /* Category.swift */,
-				96F462A62909DA720012FC98 /* Theme.swift */,
 				96F462AC290A167E0012FC98 /* Video.swift */,
 				96F462AE290A1ADB0012FC98 /* VideoError.swift */,
+				96F462A62909DA720012FC98 /* Theme.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -345,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968FABFE290DC1F5009B71F4 /* VideoProvider.swift in Sources */,
 				96F46275290958830012FC98 /* Home.swift in Sources */,
 				96F462B3290A21430012FC98 /* HTTPDataDownloader.swift in Sources */,
 				96B58849290DAAFA0072A696 /* FloatingButton.swift in Sources */,
@@ -353,6 +376,7 @@
 				96F462B1290A1CF00012FC98 /* TestData.swift in Sources */,
 				96F462A52909868F0012FC98 /* Category.swift in Sources */,
 				96F462B5290A22560012FC98 /* TestDownloader.swift in Sources */,
+				968FAC00290DD138009B71F4 /* Video+Preview.swift in Sources */,
 				96F462A72909DA720012FC98 /* Theme.swift in Sources */,
 				96B58843290D706C0072A696 /* VideoItem.swift in Sources */,
 				96F462AD290A167E0012FC98 /* Video.swift in Sources */,

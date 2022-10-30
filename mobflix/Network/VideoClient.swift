@@ -10,13 +10,13 @@ import Foundation
 actor VideoClient {
     var videos: [Video] {
         get async throws {
-            let data = try await downloader.httpData(from: feedURL)
+            let data = try await downloader.httpData(from: findAllURL)
             let allVideos = try JSONDecoder().decode([Video].self, from: data)
             return allVideos
         }
     }
     
-    private let feedURL = URL(string: "https://placeholder.com")! // TODO url do endpoint
+    private let findAllURL = URL(string: "https://placeholder.com")! // TODO url do endpoint
     
     private let downloader: any HTTPDataDownloader
     

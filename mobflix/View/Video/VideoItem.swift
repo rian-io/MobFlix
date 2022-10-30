@@ -37,11 +37,6 @@ extension VideoItem {
 
 struct VideoItem_Previews: PreviewProvider {
     static var previews: some View {
-        VideoItem(video: Video(
-            id: "",
-            title: "",
-            category: .frontend,
-            url: "https://www.youtube.com/watch?v=94yuIVdoevc")
-        )
+        VideoItem(video: Video.preview)
     }
 }

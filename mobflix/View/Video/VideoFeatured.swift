@@ -24,15 +24,17 @@ struct VideoFeatured: View {
             }
             .frame(width: 390, height: 180)
             
-            Link(destination: URL(string: video.url)!, label: {
-                Text("Assistir agora")
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
-                    .padding(10)
-                    .background(Theme.primary.colour)
-                    .cornerRadius(10)
-                    .offset(y: 50)
-            })
+            if (!video.url.isEmpty) {
+                Link(destination: URL(string: video.url)!, label: {
+                    Text("Assistir agora")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .padding(10)
+                        .background(Theme.primary.colour)
+                        .cornerRadius(10)
+                        .offset(y: 50)
+                })
+            }
         }
     }
 }
@@ -44,13 +46,9 @@ extension VideoFeatured {
     }
 }
 
-struct VideoFeatured_Previews: PreviewProvider {
+struct VideoFeatured_Previews: PreviewProvider {    
     static var previews: some View {
-        VideoFeatured(video: Video(
-            id: "",
-            title: "",
-            category: .frontend,
-            url: "https://www.youtube.com/watch?v=94yuIVdoevc")
-        )
+        VideoFeatured(video: Video.preview)
+            .previewLayout(.sizeThatFits)
     }
 }

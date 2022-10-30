@@ -21,9 +21,22 @@ final class mobflixTests: XCTestCase {
     func testClientDoesFetchVideoData() async throws {
         let downloader = TestDownloader()
         let client = VideoClient(downloader: downloader)
+        
         let videos = try await client.videos
         
         XCTAssertEqual(videos.count, 8)
+    }
+    
+    func testProviderCansFetch() async throws {
+        let downloader = TestDownloader()
+        let client = VideoClient(downloader: downloader)
+        let provider = VideosProvider(client: client)
+        
+        try await provider.fetchVideos()
+                                 
+        let videos = provider.videos
+        
+        XCTAssertEqual(videos.count, 7)
     }
 
 }

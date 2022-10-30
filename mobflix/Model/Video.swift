@@ -22,6 +22,13 @@ extension Video: Decodable {
         case url
     }
     
+    init() {
+        self.id = ""
+        self.title = ""
+        self.category = Category.programming
+        self.url = ""
+    }
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         let rawId = try? values.decode(String.self, forKey: .id)

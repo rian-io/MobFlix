@@ -10,6 +10,7 @@ import Foundation
 enum VideoError: Error {
     case missingData
     case networkError
+    case unexpectedError(error: Error)
 }
 
 extension VideoError: LocalizedError {
@@ -19,6 +20,8 @@ extension VideoError: LocalizedError {
             return NSLocalizedString("Found and will discar a video missing information", comment: "")
         case .networkError:
             return NSLocalizedString("Error fetching videos data over the network.", comment: "")
+        case .unexpectedError(let error):
+            return NSLocalizedString("Received unexpected error. \(error.localizedDescription)", comment: "")
         }
     }
 }

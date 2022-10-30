@@ -8,23 +8,27 @@
 import SwiftUI
 
 struct Home: View {
-    var videoFeatured: Video
-    var videos: [Video]
+    @EnvironmentObject var provider: VideosProvider
+    
+    @State var isLoading = false
+    @State private var error: VideoError?
+    @State private var hasError = false
+    
+    @State private var filter: String = ""
     
     var body: some View {
         NavigationView {
             ZStack {
                 List {
-                    VideoFeatured(video: videoFeatured)
+                    VideoFeatured(video: provider.featuredVideo)
                         .listRowInsets(EdgeInsets())
                         .listRowSeparator(.hidden)
                     
-                    CategoryList()
+                    CategoryList(filter: $filter)
                         .listRowSeparator(.hidden)
-                        .padding(.vertical, 20)
+                        .padding(.vertical, 28)
                     
-                    // Videos List
-                    ForEach(videos) { video in
+                    ForEach(filteredVideos) { video in
                         VideoItem(video: video)
                             .modifier(CenterModifier())
                             .listRowSeparator(.hidden)
@@ -41,9 +45,37 @@ struct Home: View {
                             .accessibilityAddTraits(.isHeader)
                     }
                 }
+                .refreshable {
+                    await fetchVideos()
+                }
                 
                 FloatingButton()
             }
+        }
+        .task {
+           await fetchVideos()
+        }
+    }
+}
+
+extension Home {
+    var filteredVideos: [Video] {
+        if (!filter.isEmpty) {
+            return provider.videos.filter { video in
+                (filter == video.category.rawValue)
+            }
+        }
+        
+        return provider.videos
+    }
+    
+    func fetchVideos() async {
+        isLoading = false
+        do {
+            try await provider.fetchVideos()
+        } catch {
+            self.error = error as? VideoError ?? .unexpectedError(error: error)
+            self.hasError = true
         }
     }
 }
@@ -60,11 +92,9 @@ struct CenterModifier: ViewModifier {
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        let decoder = JSONDecoder()
-        let videos: [Video] = try! decoder.decode([Video].self, from: testData)
-        
-        let video = videos.first!
-        
-        Home(videoFeatured: video, videos: videos)
+        Home()
+            .environmentObject(
+                VideosProvider(client:
+                              VideoClient(downloader: TestDownloader())))
     }
 }

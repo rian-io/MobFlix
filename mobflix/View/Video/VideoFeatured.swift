@@ -25,7 +25,7 @@ struct VideoFeatured: View {
             .frame(width: 390, height: 180)
             
             if (!video.url.isEmpty) {
-                Link(destination: URL(string: video.url)!, label: {
+                Link(destination: URL(string: getYoutubeWatchURL(from: video.url))!, label: {
                     Text("Assistir agora")
                         .foregroundColor(.white)
                         .fontWeight(.bold)
@@ -40,9 +40,12 @@ struct VideoFeatured: View {
 }
 
 extension VideoFeatured {
-    func getYoutubeImageURL(from videoUrl: String) -> String {
-        let videoID: String = URLComponents(string: videoUrl)?.queryItems?.first(where: { $0.name == "v" })?.value ?? ""
-        return "https://img.youtube.com/vi/\(videoID)/hqdefault.jpg"
+    func getYoutubeImageURL(from videoId: String) -> String {
+        return "https://img.youtube.com/vi/\(videoId)/hqdefault.jpg"
+    }
+    
+    func getYoutubeWatchURL(from videoId: String) -> String {
+        return "https://www.youtube.com/watch?v=\(videoId)"
     }
 }
 

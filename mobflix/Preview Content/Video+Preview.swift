@@ -12,7 +12,7 @@ extension Video {
         return Video(id: "",
                      title: "",
                      category: .frontend,
-                     url: "https://www.youtube.com/watch?v=94yuIVdoevc"
+                     url: "94yuIVdoevc"
         )
     }
 }

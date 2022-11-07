@@ -9,7 +9,8 @@ import SwiftUI
 
 @main
 struct mobflixApp: App {
-    @StateObject var videosProvider = VideosProvider()
+    @StateObject var videosProvider = VideosProvider(client: VideoClient(downloader: TestDownloader()))
+    
     var body: some Scene {
         WindowGroup {
             Home()

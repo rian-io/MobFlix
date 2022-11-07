@@ -7,36 +7,36 @@
 
 import SwiftUI
 
-struct VideoItem: View {
+struct VideoItemList: View {
     var video: Video
     
     var body: some View {
         VStack(alignment: .leading) {
             CategoryBadge(category: video.category)
+                    .padding(.bottom, 8)
             
             AsyncImage(url: URL(string: getYoutubeImageURL(from: video.url))) { image in
                 image
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 320, height: 180, alignment: .center)
                     .clipped()
             } placeholder: {
                 Color.gray
             }
-            .frame(width: 320, height: 180)
+            .frame(maxWidth: .infinity, minHeight: 180, maxHeight: 180, alignment: .center)
+            .cornerRadius(15)
         }
     }
 }
 
-extension VideoItem {
-    func getYoutubeImageURL(from videoUrl: String) -> String {
-        let videoID: String = URLComponents(string: videoUrl)?.queryItems?.first(where: { $0.name == "v" })?.value ?? ""
-        return "https://img.youtube.com/vi/\(videoID)/hqdefault.jpg"
+extension VideoItemList {
+    func getYoutubeImageURL(from videoId: String) -> String {
+        return "https://img.youtube.com/vi/\(videoId)/hqdefault.jpg"
     }
 }
 
-struct VideoItem_Previews: PreviewProvider {
+struct VideoItemList_Previews: PreviewProvider {
     static var previews: some View {
-        VideoItem(video: Video.preview)
+        VideoItemList(video: Video.preview)
     }
 }

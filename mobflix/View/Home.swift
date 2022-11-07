@@ -10,82 +10,85 @@ import SwiftUI
 struct Home: View {
     @EnvironmentObject var provider: VideosProvider
     
-    @State var isLoading = false
-    @State private var error: VideoError?
-    @State private var hasError = false
+    @State var isPresentingVideoSheet = false;
     
-    @State private var filter: String = ""
+    @State var videoData = Video()
     
     var body: some View {
         NavigationView {
-            ZStack {
-                List {
-                    VideoFeatured(video: provider.featuredVideo)
-                        .listRowInsets(EdgeInsets())
-                        .listRowSeparator(.hidden)
-                    
-                    CategoryList(filter: $filter)
-                        .listRowSeparator(.hidden)
-                        .padding(.vertical, 28)
-                    
-                    ForEach(filteredVideos) { video in
-                        VideoItem(video: video)
-                            .modifier(CenterModifier())
-                            .listRowSeparator(.hidden)
-                    }
-                }
-                .listStyle(.inset)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Text("MOBFLIX")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(Theme.primary.colour)
-                            .accessibilityAddTraits(.isHeader)
-                    }
-                }
-                .refreshable {
-                    await fetchVideos()
-                }
+            List {
+                VideoFeatured(video: provider.featuredVideo)
+                    .listRowInsets(EdgeInsets())
+                    .listRowSeparator(.hidden)
                 
-                FloatingButton()
+                CategoryList()
+                    .listRowSeparator(.hidden)
+                    .padding(.vertical, 28)
+                
+                ForEach(provider.videos) { video in
+                    VideoItemList(video: video)
+                        .listRowSeparator(.hidden)
+                        .onTapGesture { }
+                        .onLongPressGesture(minimumDuration: 0.2) {
+                            videoData = video
+                            isPresentingVideoSheet = true
+                        }
+                }
+            }
+            .listStyle(.inset)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("MOBFLIX")
+                        .font(.custom("BebasNeue-Regular", size: 32))
+                        .foregroundColor(Theme.primary.colour)
+                        .accessibilityAddTraits(.isHeader)
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        isPresentingVideoSheet = true
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                }
+            }
+            .sheet(isPresented: $isPresentingVideoSheet) {
+                NavigationView {
+                    VideoEdit(video: $videoData, isPresentingVideoSheet: $isPresentingVideoSheet)
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Cancelar") {
+                                    isPresentingVideoSheet = false
+                                    videoData = Video()
+                                }
+                            }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Salvar") {
+                                    isPresentingVideoSheet = false
+                                    
+                                    let newVideo = videoData
+                                    if (newVideo.id.isEmpty) {
+                                        provider.videos.append(newVideo)
+                                    } else {
+                                        provider.update(video: newVideo)
+                                    }
+                                    
+                                    videoData = Video()
+                                }
+                            }
+                        }
+                }
+            }
+            .refreshable {
+                do {
+                    try await provider.fetchVideos()
+                } catch { }
             }
         }
         .task {
-           await fetchVideos()
-        }
-    }
-}
-
-extension Home {
-    var filteredVideos: [Video] {
-        if (!filter.isEmpty) {
-            return provider.videos.filter { video in
-                (filter == video.category.rawValue)
-            }
-        }
-        
-        return provider.videos
-    }
-    
-    func fetchVideos() async {
-        isLoading = false
-        do {
-            try await provider.fetchVideos()
-        } catch {
-            self.error = error as? VideoError ?? .unexpectedError(error: error)
-            self.hasError = true
-        }
-    }
-}
-
-struct CenterModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        HStack {
-            Spacer()
-            content
-            Spacer()
+            do {
+                try await provider.fetchVideos()
+            } catch { }
         }
     }
 }
@@ -95,6 +98,7 @@ struct Home_Previews: PreviewProvider {
         Home()
             .environmentObject(
                 VideosProvider(client:
-                              VideoClient(downloader: TestDownloader())))
+                                VideoClient(downloader:
+                                                TestDownloader())))
     }
 }

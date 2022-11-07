@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class VideosProvider: ObservableObject {
     
     @Published var videos: [Video] = []
@@ -26,5 +27,17 @@ final class VideosProvider: ObservableObject {
                 
         self.videos = allVideos
         self.featuredVideo = video
+    }
+    
+    func update(video: Video) {
+        if let offSet = videos.firstIndex(where: { $0.id == video.id }) {
+            videos[offSet] = video
+        }
+    }
+    
+    func remove(video: Video) {
+        if let offSet = videos.firstIndex(where: { $0.id == video.id }) {
+            videos.remove(at: offSet)
+        }
     }
 }

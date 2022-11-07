@@ -14,19 +14,21 @@ struct Video: Identifiable {
     var url: String
 }
 
-extension Video: Decodable {
+extension Video {
+    init() {
+        self.id = ""
+        self.title = ""
+        self.category = .frontend
+        self.url = ""
+    }
+}
+
+extension Video: Decodable {    
     private enum CodingKeys: String, CodingKey {
         case id
         case title = "titulo"
         case category = "categoria"
         case url
-    }
-    
-    init() {
-        self.id = ""
-        self.title = ""
-        self.category = Category.programming
-        self.url = ""
     }
     
     init(from decoder: Decoder) throws {

@@ -10,6 +10,10 @@ import SwiftUI
 struct VideoByCategory: View {
     @EnvironmentObject var provider: VideosProvider
     
+    @State var isPresentingVideoSheet = false;
+    
+    @State var videoData = Video()
+    
     var filter: String
     
     var body: some View {
@@ -26,7 +30,7 @@ struct VideoByCategory: View {
             .listRowSeparator(.hidden)
             
             ForEach(filteredVideos) { video in
-                VideoItemList(video: video)
+                VideoItemList(video: video, isPresentingVideoSheet: $isPresentingVideoSheet, selectedVideo: $videoData)
                     .listRowSeparator(.hidden)
             }
         }

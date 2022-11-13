@@ -10,7 +10,7 @@ import XCTest
 
 final class mobflixTests: XCTestCase {
 
-    func testVideoDecoderDecodeVideoArray() throws {
+    func testVideoDecoderCanDecodeVideoArray() throws {
         let decoder = JSONDecoder()
         let decoded = try decoder.decode([Video].self, from: testData)
         
@@ -27,14 +27,14 @@ final class mobflixTests: XCTestCase {
         XCTAssertEqual(videos.count, 8)
     }
     
-    func testProviderCansFetch() async throws {
+    func testProviderCanFetch() async throws {
         let downloader = TestDownloader()
         let client = VideoClient(downloader: downloader)
-        let provider = VideosProvider(client: client)
+        let provider = await VideosProvider(client: client)
         
         try await provider.fetchVideos()
                                  
-        let videos = provider.videos
+        let videos = await provider.videos
         
         XCTAssertEqual(videos.count, 7)
     }

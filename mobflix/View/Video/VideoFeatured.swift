@@ -25,7 +25,7 @@ struct VideoFeatured: View {
             .frame(width: 390, height: 180)
             
             if (!video.url.isEmpty) {
-                Link(destination: URL(string: getYoutubeWatchURL(from: video.url))!, label: {
+                Link(destination: URL(string: getYoutubeWatchURL(from: video.url))!) {
                     Text("Assistir agora")
                         .foregroundColor(.white)
                         .fontWeight(.bold)
@@ -33,7 +33,7 @@ struct VideoFeatured: View {
                         .background(Theme.primary.colour)
                         .cornerRadius(10)
                         .offset(y: 50)
-                })
+                }
             }
         }
     }

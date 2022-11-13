@@ -26,13 +26,8 @@ struct Home: View {
                     .padding(.vertical, 28)
                 
                 ForEach(provider.videos) { video in
-                    VideoItemList(video: video)
+                    VideoItemList(video: video, isPresentingVideoSheet: $isPresentingVideoSheet, selectedVideo: $videoData)
                         .listRowSeparator(.hidden)
-                        .onTapGesture { }
-                        .onLongPressGesture(minimumDuration: 0.2) {
-                            videoData = video
-                            isPresentingVideoSheet = true
-                        }
                 }
             }
             .listStyle(.inset)
@@ -67,6 +62,7 @@ struct Home: View {
                                     isPresentingVideoSheet = false
                                     
                                     let newVideo = videoData
+                                    
                                     if (newVideo.id.isEmpty) {
                                         provider.videos.append(newVideo)
                                     } else {
